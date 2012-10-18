@@ -18,46 +18,46 @@
   <div id="main">
     <div id="content">
       <h1>CanvasCoder</h1>
-<div class="row">
-  <div class="span6">
-    <p class="left">Code</p>
-    <form>
-      <ul class="sizeform">
-        <li class="left">
-          <input type="text" class="sizetext" id="sizex" name="width" value=600 />
-        </li>
-        <li class="left">
-          x
-        </li>
-        <li class="left">
-          <input type="text" class="sizetext" id="sizey" name="height" value=500 />
-        </li>
-      </ul>
-    </form>
-    <textarea id="canvascode" class="code clear"></textarea>
-    <p>ErrorMessage</p>
-    <textarea id="errormessage" class="code clear"></textarea>
-    <div>
-      <a href="javascript:void(0)" id="exebtn" class="btn right">実行</a>
-    </div>
-  </div>
-  <div class="span6">
-    <div class="result">
-      <p>Result</p>
-      <canvas id="resultimage"></canvas>
-    </div>
-  </div>
-</div>
-<script src="/js/gin.js"></script>
-<script>
-$(function(){
+      <div class="row">
+        <div class="span6">
+          <p class="left">Code</p>
+          <form>
+            <ul class="sizeform">
+              <li class="left">
+                <input type="text" class="sizetext" id="sizex" name="width" value=600 />
+              </li>
+              <li class="left">
+                x
+              </li>
+              <li class="left">
+                <input type="text" class="sizetext" id="sizey" name="height" value=500 />
+              </li>
+            </ul>
+          </form>
+          <textarea id="canvascode" class="code clear"></textarea>
+          <p>ErrorMessage</p>
+          <textarea id="errormessage" class="code clear"></textarea>
+          <div>
+            <a href="javascript:void(0)" id="exebtn" class="btn right">実行</a>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="result">
+            <p>Result</p>
+            <canvas id="resultimage"></canvas>
+          </div>
+        </div>
+      </div>
+      <script src="/js/gin.js"></script>
+      <script>
+      $(function(){
   //テキストフィールド"sizex"
   $("#sizex").keyup(function () {
     var value = $("#sizex").val();
     $("#resultimage").css({width: value+"px"});
     $("#resultimage")[0].width = value;
   }).keyup();
- 
+  
   //テキストフィールド"sizey"
   $("#sizey").keyup(function () {
     var value = $("#sizey").val();
@@ -100,7 +100,7 @@ $(function(){
   });
 });
 </script>
-    </div>
-  </div>
+</div>
+</div>
 </body>
 </html>
