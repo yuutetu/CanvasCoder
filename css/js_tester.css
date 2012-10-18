@@ -1,0 +1,15 @@
+.code{
+	width: 100%
+}
+#testcode{
+	height: 350px;
+}
+#logcode{
+	height: 320px;
+}
+#resultcode{
+	height: 30px;
+}
+.right{
+	float: right;
+}

@@ -1,0 +1,34 @@
+body{
+	background-color: #DCEAF4;
+}
+.code{
+	width: 100%
+}
+.sizetext{
+	width: 50px;
+}
+#canvascode{
+	height: 350px;
+}
+#resultimage{
+	height: 350px;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+ul.sizeform{
+	padding-left: 10px;
+	float: right;
+}
+ul.sizeform li{
+	list-style:none;
+}
+.clear{
+	clear: both;
+}
+canvas{
+	background-color: white;
+}
