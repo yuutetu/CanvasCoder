@@ -2,4 +2,4 @@
 
 プログラムっぽく書いて絵を書くツールです。
 
-![alt text](sample.png)
+![alt text](https://github.com/yuutetu/CanvasCoder/blob/master/sample.png?raw=true)
