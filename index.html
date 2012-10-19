@@ -50,14 +50,14 @@
       </div>
       <script src="/js/gin.js"></script>
       <script>
-      $(function(){
+$(function(){
   //テキストフィールド"sizex"
   $("#sizex").keyup(function () {
     var value = $("#sizex").val();
     $("#resultimage").css({width: value+"px"});
     $("#resultimage")[0].width = value;
   }).keyup();
-  
+
   //テキストフィールド"sizey"
   $("#sizey").keyup(function () {
     var value = $("#sizey").val();
@@ -68,8 +68,9 @@
   //canvascode syntax
   var exec = new Gin.Grammar({
     PList: / Program (Program)* /,
-    Program: / Rect /,
-    Rect: / [fillRect] Int[,]Int[,]Int[,]Int:fillrect/,
+    Program: / FillRect | StrokeRect /,
+    FillRect: / [fillRect] Int[,]Int[,]Int[,]Int:fillrect/,
+    StrokeRect: / [strokeRect] Int[,]Int[,]Int[,]Int:strokerect/,
     Int: / $UINT:push /
   }, "PList", Gin.SPACE);
 
@@ -90,6 +91,15 @@
       var height = this.shift();
       ctx.beginPath();
       ctx.fillRect(x, y, x+width, y+height);
+    },
+    strokerect: function(){
+      var ctx = $("#resultimage")[0].getContext('2d');
+      var x = this.shift();
+      var y = this.shift();
+      var width = this.shift();
+      var height = this.shift();
+      ctx.beginPath();
+      ctx.strokeRect(x, y, x+width, y+height);
     }
   };
 
